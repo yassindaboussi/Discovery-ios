@@ -8,12 +8,12 @@ Discovery app📱helps you find where to spend your vacation. Whatever your age 
 
 <p align=center>
     <div align="center">
-     <img  width = "200px" src ="capture/1.jpg"/>
-      <img  width = "200px" src="capture/2.jpg" />
-      <img  height="433px" src="capture/3.jpg"/>
-      <img  width = "200px" src ="capture/4.jpg"/>
+     <img  width = "200px" src ="capture/1.png"/>
+      <img  width = "200px" src="capture/2.png" />
+      <img  height="433px" src="capture/3.png"/>
+      <img  width = "200px" src ="capture/4.png"/>
       <br>
-     <img  width = "200px" src ="capture/5.jpg"/>
+     <img  width = "200px" src ="capture/5.png"/>
     </div>
 </p>
 

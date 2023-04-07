@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		109C6E5F29DDA6490013D644 /* ResetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C6E5E29DDA6490013D644 /* ResetPasswordScreen.swift */; };
+		109C6E6129DDA9230013D644 /* OTPInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C6E6029DDA9230013D644 /* OTPInputView.swift */; };
+		109C6E6329DDABCD0013D644 /* VerificationOtpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C6E6229DDABCD0013D644 /* VerificationOtpScreen.swift */; };
+		109C6E6829DDB2960013D644 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C6E6729DDB2960013D644 /* User.swift */; };
+		109C6E6A29DDB4690013D644 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C6E6929DDB4690013D644 /* LoginViewModel.swift */; };
+		109C6E6D29DDBD350013D644 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 109C6E6C29DDBD350013D644 /* Alamofire */; };
+		109D923829C9CE13003C9359 /* DiscoveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D923729C9CE13003C9359 /* DiscoveryApp.swift */; };
+		109D923C29C9CE13003C9359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 109D923B29C9CE13003C9359 /* Assets.xcassets */; };
+		109D923F29C9CE14003C9359 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 109D923E29C9CE14003C9359 /* Preview Assets.xcassets */; };
+		109D924929C9D6B3003C9359 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D924829C9D6B3003C9359 /* RoundedCorners.swift */; };
+		109D924C29C9DE43003C9359 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D924B29C9DE43003C9359 /* CustomTextField.swift */; };
+		109D925629C9FF89003C9359 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D925529C9FF89003C9359 /* SignUpScreen.swift */; };
+		109D925829CA004C003C9359 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D925729CA004C003C9359 /* CustomSecureField.swift */; };
+		109E15EE29DE248500C3E28A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109E15ED29DE248500C3E28A /* SignUpViewModel.swift */; };
+		109E15F029DE4BC800C3E28A /* ForgetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109E15EF29DE4BC800C3E28A /* ForgetPasswordModel.swift */; };
+		10A021C329D84B7F00A933F8 /* CheckboxToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A021C229D84B7F00A933F8 /* CheckboxToggle.swift */; };
+		10A021C529D84C5B00A933F8 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A021C429D84C5B00A933F8 /* LoginScreen.swift */; };
+		10A021C829D84EEE00A933F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A021C729D84EEE00A933F8 /* Colors.swift */; };
+		10A021CA29D8661500A933F8 /* ForgetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A021C929D8661500A933F8 /* ForgetPasswordScreen.swift */; };
+		10A3433529DF5ECB0055C08C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3433429DF5ECB0055C08C /* Const.swift */; };
+		10A3433729DF9C860055C08C /* ChangePasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3433629DF9C860055C08C /* ChangePasswordScreen.swift */; };
+		10A3433929DFA2AD0055C08C /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3433829DFA2AD0055C08C /* ChangePasswordViewModel.swift */; };
+		10A3433D29DFC3250055C08C /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3433C29DFC3250055C08C /* SplashScreen.swift */; };
+		10A3433F29DFCBD00055C08C /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3433E29DFCBD00055C08C /* ProfileScreen.swift */; };
+		10A3434129DFCDF30055C08C /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3434029DFCDF30055C08C /* Snackbar.swift */; };
+		10A3434429DFD6230055C08C /* SwiftUISnackbar in Frameworks */ = {isa = PBXBuildFile; productRef = 10A3434329DFD6230055C08C /* SwiftUISnackbar */; };
+		10A3434629DFF92C0055C08C /* ProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A3434529DFF92C0055C08C /* ProfileEdit.swift */; };
+		9A1CAC57E80F11E4EEE6CD7F /* Pods_Discovery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECB25CA3FB9A0C85564ADF2 /* Pods_Discovery.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		109C6E5E29DDA6490013D644 /* ResetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordScreen.swift; sourceTree = "<group>"; };
+		109C6E6029DDA9230013D644 /* OTPInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPInputView.swift; sourceTree = "<group>"; };
+		109C6E6229DDABCD0013D644 /* VerificationOtpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationOtpScreen.swift; sourceTree = "<group>"; };
+		109C6E6729DDB2960013D644 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		109C6E6929DDB4690013D644 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		109D923429C9CE13003C9359 /* Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		109D923729C9CE13003C9359 /* DiscoveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryApp.swift; sourceTree = "<group>"; };
+		109D923B29C9CE13003C9359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		109D923E29C9CE14003C9359 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		109D924829C9D6B3003C9359 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		109D924B29C9DE43003C9359 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		109D925529C9FF89003C9359 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		109D925729CA004C003C9359 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		109E15ED29DE248500C3E28A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		109E15EF29DE4BC800C3E28A /* ForgetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModel.swift; sourceTree = "<group>"; };
+		10A021C229D84B7F00A933F8 /* CheckboxToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggle.swift; sourceTree = "<group>"; };
+		10A021C429D84C5B00A933F8 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		10A021C729D84EEE00A933F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		10A021C929D8661500A933F8 /* ForgetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordScreen.swift; sourceTree = "<group>"; };
+		10A3433429DF5ECB0055C08C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		10A3433629DF9C860055C08C /* ChangePasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordScreen.swift; sourceTree = "<group>"; };
+		10A3433829DFA2AD0055C08C /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		10A3433C29DFC3250055C08C /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		10A3433E29DFCBD00055C08C /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		10A3434029DFCDF30055C08C /* Snackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snackbar.swift; sourceTree = "<group>"; };
+		10A3434529DFF92C0055C08C /* ProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEdit.swift; sourceTree = "<group>"; };
+		1FBE004BB7D791C559A120DF /* Pods-Discovery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discovery.debug.xcconfig"; path = "Target Support Files/Pods-Discovery/Pods-Discovery.debug.xcconfig"; sourceTree = "<group>"; };
+		25CF68DE8BB24EB3D9FB20CC /* Pods-Discovery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discovery.release.xcconfig"; path = "Target Support Files/Pods-Discovery/Pods-Discovery.release.xcconfig"; sourceTree = "<group>"; };
+		AECB25CA3FB9A0C85564ADF2 /* Pods_Discovery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Discovery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		109D923129C9CE13003C9359 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1CAC57E80F11E4EEE6CD7F /* Pods_Discovery.framework in Frameworks */,
+				10A3434429DFD6230055C08C /* SwiftUISnackbar in Frameworks */,
+				109C6E6D29DDBD350013D644 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		109C6E6429DDB0480013D644 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				109D923729C9CE13003C9359 /* DiscoveryApp.swift */,
+				109D925529C9FF89003C9359 /* SignUpScreen.swift */,
+				10A021C429D84C5B00A933F8 /* LoginScreen.swift */,
+				10A021C929D8661500A933F8 /* ForgetPasswordScreen.swift */,
+				109C6E5E29DDA6490013D644 /* ResetPasswordScreen.swift */,
+				109C6E6229DDABCD0013D644 /* VerificationOtpScreen.swift */,
+				10A3433629DF9C860055C08C /* ChangePasswordScreen.swift */,
+				10A3433C29DFC3250055C08C /* SplashScreen.swift */,
+				10A3433E29DFCBD00055C08C /* ProfileScreen.swift */,
+				10A3434529DFF92C0055C08C /* ProfileEdit.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		109C6E6529DDB07B0013D644 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				109C6E6729DDB2960013D644 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		109C6E6629DDB0840013D644 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				109E15ED29DE248500C3E28A /* SignUpViewModel.swift */,
+				109C6E6929DDB4690013D644 /* LoginViewModel.swift */,
+				109E15EF29DE4BC800C3E28A /* ForgetPasswordModel.swift */,
+				10A3433829DFA2AD0055C08C /* ChangePasswordViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		109D922B29C9CE13003C9359 = {
+			isa = PBXGroup;
+			children = (
+				10A021C629D84ED800A933F8 /* Utils */,
+				109D924A29C9DD77003C9359 /* Components */,
+				109D924729C9D5EB003C9359 /* Shapes */,
+				109D923629C9CE13003C9359 /* Discovery */,
+				109D923529C9CE13003C9359 /* Products */,
+				2F4CC9648D9D755A03504BDD /* Pods */,
+				16F4FDEC4EDB969C092177E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		109D923529C9CE13003C9359 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				109D923429C9CE13003C9359 /* Discovery.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		109D923629C9CE13003C9359 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				109C6E6629DDB0840013D644 /* ViewModels */,
+				109C6E6529DDB07B0013D644 /* Models */,
+				109C6E6429DDB0480013D644 /* Views */,
+				109D923B29C9CE13003C9359 /* Assets.xcassets */,
+				109D923D29C9CE14003C9359 /* Preview Content */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		109D923D29C9CE14003C9359 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				109D923E29C9CE14003C9359 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		109D924729C9D5EB003C9359 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				109D924829C9D6B3003C9359 /* RoundedCorners.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		109D924A29C9DD77003C9359 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				109D924B29C9DE43003C9359 /* CustomTextField.swift */,
+				109D925729CA004C003C9359 /* CustomSecureField.swift */,
+				10A021C229D84B7F00A933F8 /* CheckboxToggle.swift */,
+				109C6E6029DDA9230013D644 /* OTPInputView.swift */,
+				10A3434029DFCDF30055C08C /* Snackbar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		10A021C629D84ED800A933F8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10A021C729D84EEE00A933F8 /* Colors.swift */,
+				10A3433429DF5ECB0055C08C /* Const.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		16F4FDEC4EDB969C092177E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AECB25CA3FB9A0C85564ADF2 /* Pods_Discovery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F4CC9648D9D755A03504BDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FBE004BB7D791C559A120DF /* Pods-Discovery.debug.xcconfig */,
+				25CF68DE8BB24EB3D9FB20CC /* Pods-Discovery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		109D923329C9CE13003C9359 /* Discovery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 109D924229C9CE14003C9359 /* Build configuration list for PBXNativeTarget "Discovery" */;
+			buildPhases = (
+				8AFA3AFB87C6C60C0263AB17 /* [CP] Check Pods Manifest.lock */,
+				109D923029C9CE13003C9359 /* Sources */,
+				109D923129C9CE13003C9359 /* Frameworks */,
+				109D923229C9CE13003C9359 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Discovery;
+			packageProductDependencies = (
+				109C6E6C29DDBD350013D644 /* Alamofire */,
+				10A3434329DFD6230055C08C /* SwiftUISnackbar */,
+			);
+			productName = Discovery;
+			productReference = 109D923429C9CE13003C9359 /* Discovery.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		109D922C29C9CE13003C9359 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					109D923329C9CE13003C9359 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 109D922F29C9CE13003C9359 /* Build configuration list for PBXProject "Discovery" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 109D922B29C9CE13003C9359;
+			packageReferences = (
+				109C6E6B29DDBD350013D644 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				10A3434229DFD6230055C08C /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */,
+			);
+			productRefGroup = 109D923529C9CE13003C9359 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				109D923329C9CE13003C9359 /* Discovery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		109D923229C9CE13003C9359 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				109D923F29C9CE14003C9359 /* Preview Assets.xcassets in Resources */,
+				109D923C29C9CE13003C9359 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8AFA3AFB87C6C60C0263AB17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Discovery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		109D923029C9CE13003C9359 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A3433D29DFC3250055C08C /* SplashScreen.swift in Sources */,
+				10A3433F29DFCBD00055C08C /* ProfileScreen.swift in Sources */,
+				109C6E6829DDB2960013D644 /* User.swift in Sources */,
+				109C6E6329DDABCD0013D644 /* VerificationOtpScreen.swift in Sources */,
+				10A021C329D84B7F00A933F8 /* CheckboxToggle.swift in Sources */,
+				10A021C829D84EEE00A933F8 /* Colors.swift in Sources */,
+				10A021CA29D8661500A933F8 /* ForgetPasswordScreen.swift in Sources */,
+				109D925829CA004C003C9359 /* CustomSecureField.swift in Sources */,
+				10A3433929DFA2AD0055C08C /* ChangePasswordViewModel.swift in Sources */,
+				10A3433529DF5ECB0055C08C /* Const.swift in Sources */,
+				10A3434629DFF92C0055C08C /* ProfileEdit.swift in Sources */,
+				10A3434129DFCDF30055C08C /* Snackbar.swift in Sources */,
+				109C6E6A29DDB4690013D644 /* LoginViewModel.swift in Sources */,
+				109E15EE29DE248500C3E28A /* SignUpViewModel.swift in Sources */,
+				109C6E5F29DDA6490013D644 /* ResetPasswordScreen.swift in Sources */,
+				109D924929C9D6B3003C9359 /* RoundedCorners.swift in Sources */,
+				109C6E6129DDA9230013D644 /* OTPInputView.swift in Sources */,
+				109D923829C9CE13003C9359 /* DiscoveryApp.swift in Sources */,
+				10A021C529D84C5B00A933F8 /* LoginScreen.swift in Sources */,
+				10A3433729DF9C860055C08C /* ChangePasswordScreen.swift in Sources */,
+				109D924C29C9DE43003C9359 /* CustomTextField.swift in Sources */,
+				109D925629C9FF89003C9359 /* SignUpScreen.swift in Sources */,
+				109E15F029DE4BC800C3E28A /* ForgetPasswordModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		109D924029C9CE14003C9359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		109D924129C9CE14003C9359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		109D924329C9CE14003C9359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBE004BB7D791C559A120DF /* Pods-Discovery.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Discovery/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tn.esprit.Discovery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		109D924429C9CE14003C9359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25CF68DE8BB24EB3D9FB20CC /* Pods-Discovery.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Discovery/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tn.esprit.Discovery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		109D922F29C9CE13003C9359 /* Build configuration list for PBXProject "Discovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				109D924029C9CE14003C9359 /* Debug */,
+				109D924129C9CE14003C9359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		109D924229C9CE14003C9359 /* Build configuration list for PBXNativeTarget "Discovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				109D924329C9CE14003C9359 /* Debug */,
+				109D924429C9CE14003C9359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		109C6E6B29DDBD350013D644 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		10A3434229DFD6230055C08C /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zaniluca/SwiftUISnackbar";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		109C6E6C29DDBD350013D644 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 109C6E6B29DDBD350013D644 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		10A3434329DFD6230055C08C /* SwiftUISnackbar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10A3434229DFD6230055C08C /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */;
+			productName = SwiftUISnackbar;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 109D922C29C9CE13003C9359 /* Project object */;
+}

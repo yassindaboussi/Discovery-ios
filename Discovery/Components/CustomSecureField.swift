@@ -12,7 +12,7 @@ struct PasswordView: View {
     
     var leftIcon : String
 
-    var placeHolder : String
+    var placeHolder : LocalizedStringKey
 
     
     @State private var isEditing = false

@@ -56,7 +56,7 @@ struct ChangePasswordRequest: Encodable {
     let newPassword: String
     let bio: String
 }
-struct User: Decodable {
+struct User:Codable,Hashable {
     let _id: String
     let username: String
     let email: String

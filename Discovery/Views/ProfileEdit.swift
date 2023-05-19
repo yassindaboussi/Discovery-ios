@@ -46,7 +46,7 @@ struct ProfileEditView: View {
                         .foregroundColor(Color.black)
                    
                     
-                    Image(systemName: "arrow.forward")
+                    Image(systemName: "chevron.right")
                         .foregroundColor(Color.black)
                 }
                 .padding(10)
@@ -64,7 +64,7 @@ struct ProfileEditView: View {
                         .foregroundColor(Color.black)
                         .padding(.trailing, 5)
                     
-                    Image(systemName: "arrow.forward")
+                    Image(systemName: "chevron.right")
                         .foregroundColor(Color.black)
                 }
                 .padding(10)
@@ -82,7 +82,7 @@ struct ProfileEditView: View {
                         .foregroundColor(Color.black)
                 
                     
-                    Image(systemName: "arrow.forward")
+                    Image(systemName: "chevron.right")
                         .foregroundColor(Color.black)
                     
                 }

@@ -23,15 +23,15 @@ struct ForgetPasswordScreen: View {
                         .edgesIgnoringSafeArea(.horizontal)
             
             
-            Text("Forget password ?").font(.system(size:30)).frame(maxWidth:.infinity, alignment:.leading)
+            Text(NSLocalizedString("forgetPassword",comment:"Forget password ?")).font(.system(size:30)).frame(maxWidth:.infinity, alignment:.leading)
                 .padding(.bottom,5)
             
-            Text("Don't worry ! It happens.Please enter the adress associted with your account")
+            Text(NSLocalizedString("dontWoory",comment:"Don't worry ! It happens.Please enter the adress associted with your account"))
                 .frame(maxWidth:.infinity, alignment:.leading)
                 .foregroundColor(Color.gray)
             
             Section{
-                TextFieldView(leftIcon : "envelope",placeHolder : "Email", text: $forgetPasswordViewModel.email)
+                CustumTextField(leftIcon : "envelope",placeHolder : "Email", text: $forgetPasswordViewModel.email)
                     .onChange(of: forgetPasswordViewModel.email) { value in
                         forgetPasswordViewModel.validateEmail()
                     }
@@ -69,7 +69,7 @@ struct ForgetPasswordScreen: View {
                     }
                 }
                     }) {
-                        Text("Send")
+                        Text(NSLocalizedString("send",comment: "Send"))
                             .padding()
                             .foregroundColor(Color.white)
                            
@@ -86,9 +86,9 @@ struct ForgetPasswordScreen: View {
             Spacer()
             HStack{
        
-                Text("Back to ?").foregroundColor(Color.gray)
+                Text(NSLocalizedString("backTo",comment: "Back to?")).foregroundColor(Color.gray)
                     NavigationLink(destination: SignUpScreen()) {
-                        Text("Login").foregroundColor(Color.red)
+                        Text(NSLocalizedString("login",comment: "Login")).foregroundColor(Color.red)
                     
                     }}
         }.padding(20)

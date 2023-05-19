@@ -24,10 +24,10 @@ struct VerificationOtpScreen: View {
                         .edgesIgnoringSafeArea(.horizontal)
             
             
-            Text("Verification code").font(.system(size:30)).frame(maxWidth:.infinity, alignment:.leading)
+            Text(NSLocalizedString("verificationCode", comment: "Verification code")).font(.system(size:30)).frame(maxWidth:.infinity, alignment:.leading)
                 .padding(.bottom,5)
             
-            Text("We have send code to your e-mail,please type the code")
+            Text(NSLocalizedString("codeSendedToMail", comment: "We have send code to your e-mail,please type the code"))
                 .frame(maxWidth:.infinity, alignment:.leading)
                 .foregroundColor(Color.gray)
             OTPInputView(otp: $otp)
@@ -71,7 +71,7 @@ struct VerificationOtpScreen: View {
         
                 
                     }) {
-                        Text("Verify")
+                        Text(NSLocalizedString("verify", comment: "Verify"))
                             .padding()
                             .foregroundColor(Color.white)
                            
@@ -86,10 +86,10 @@ struct VerificationOtpScreen: View {
             NavigationLink(destination: ResetPasswordScreen(email: $email, otp:$otp).navigationBarBackButtonHidden(true), isActive: $isPresenting) { EmptyView() }
             Spacer()
             HStack{
-       
-                Text("Back to ?").foregroundColor(Color.gray)
-                    NavigationLink(destination: SignUpScreen()) {
-                        Text("Login").foregroundColor(Color.red)
+                Text(  NSLocalizedString("backTo", comment: "Back to?")).foregroundColor(Color.gray)
+                    NavigationLink(destination: LoginScreen()) {
+                        Text(  NSLocalizedString("login", comment: "Login")).foregroundColor(Color.red)
+                            .navigationBarBackButtonHidden(true)
                     
                     }}
 

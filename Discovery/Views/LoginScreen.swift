@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import LocalAuthentication
 import SwiftUI
 import SwiftUISnackbar
 
@@ -14,7 +14,6 @@ struct LoginScreen: View {
     
     @StateObject var loginViewModel = LoginViewModel()
     @State var isPresenting = false
-    @State var isChecked = false
     @State private var loginSuccess = false
     @State private var isSnackbarShowing = false
     @State private var snackbarMessage=""
@@ -22,9 +21,13 @@ struct LoginScreen: View {
     //
     let email = UserDefaults.standard.string(forKey: "email")
     let password = UserDefaults.standard.string(forKey: "password")
+    @State var role :String = ""
 
     //
-    
+    @State private var faceIDAuthenticationResult: Bool? = nil
+    @State private var isUnlocked = false
+    @State private var showAlert = false
+    //
     var body: some View {
         NavigationView {
             
@@ -35,7 +38,7 @@ struct LoginScreen: View {
                         .frame(height: 300)
                         .edgesIgnoringSafeArea(.horizontal)
             Section{
-                TextFieldView(leftIcon : "envelope",placeHolder : "Email", text: $loginViewModel.email)
+                CustumTextField(leftIcon : "envelope",placeHolder :LocalizedStringKey("email"), text: $loginViewModel.email)
                     .onChange(of: loginViewModel.email) { value in
                         loginViewModel.validateEmail()
                     }
@@ -45,10 +48,10 @@ struct LoginScreen: View {
                 }
             }
                 
-            
+    
           
             Section{
-            PasswordView(leftIcon : "lock", placeHolder:"Password", password: $loginViewModel.password)
+            PasswordView(leftIcon : "lock", placeHolder :LocalizedStringKey("password"), password: $loginViewModel.password)
                 .onChange(of: loginViewModel.password) { value in
                     loginViewModel.validatePassword()
                 }
@@ -58,14 +61,15 @@ struct LoginScreen: View {
             }   }
 
             HStack{
-                CheckboxToggle(isChecked:$isChecked)
+   
                 Spacer()
                     NavigationLink(destination: ForgetPasswordScreen()) {
-                        Text("Forget password ?").foregroundColor(Color.red)
-                    
+                        Text(LocalizedStringKey("forgetPassword")).foregroundColor(Color.red)
                     }}
             
             Button(action: {
+                if isUnlocked {
+
                 let request = LoginRequest(email: loginViewModel.email, password: loginViewModel.password)
                 loginViewModel.login(request: request) { result in
                     switch result {
@@ -79,24 +83,29 @@ struct LoginScreen: View {
                                                     }
                                                 }
                         isPresenting = true
-                        if isChecked {
-                                            // Store user's credentials in UserDefaults
+                  
                             UserDefaults.standard.set(response.id, forKey: "id")
                             UserDefaults.standard.set(response.name, forKey: "username")
                             UserDefaults.standard.set(response.email, forKey: "email")
                             UserDefaults.standard.set(response.bio, forKey: "bio")
                             UserDefaults.standard.set(response.avatar, forKey: "avatar")
-                                  
-                                        }
+                            UserDefaults.standard.set(response.role, forKey: "role")
+                            UserDefaults.standard.set(response.token, forKey: "token")
+                            print(response.token)
+                        self.role = response.role
 
-                     //   self.redirectToHomePage = true // Set redirectToHomePage to true
-                    case .failure(let error):
-                        // Action si la connexion échoue
-                        print(error)
-                    }
-                }
+                        //   self.redirectToHomePage = true // Set redirectToHomePage to true
+                       case .failure(let error):
+                           // Action si la connexion échoue
+                           print(error)
+                       }
+                   }
+               } else {
+                   Text("Please authenticate with Face ID")
+                   showAlert = true
+               }
                     }) {
-                        Text("Login")
+                        Text(NSLocalizedString("login", comment: "Login"))
                             .padding()
                             .foregroundColor(Color.white)
                            
@@ -107,15 +116,40 @@ struct LoginScreen: View {
                 .cornerRadius(10)
                 .padding(.top,20)
                 .foregroundColor(Color.gray)
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Alert"),
+                        message: Text("You need to authenticate with Face ID first"),
+                        primaryButton: .default(Text("OK")),
+                        secondaryButton: .cancel()
+                    )
+                }
             
-            NavigationLink(destination: ProfileView().navigationBarBackButtonHidden(true), isActive: $isPresenting) { EmptyView() }
-
+            Button(action: authenticateWithBiometrics) {
+              Image(systemName: "faceid")
+                  .resizable()
+                  .frame(width: 50, height: 50)
+           }
+            
+            if isUnlocked {
+                Text("Authenticated successfully!")
+            } else {
+                Text("Please authenticate with Face ID")
+            }
+          //  NavigationLink(destination: BottomNavigation().navigationBarBackButtonHidden(true), isActive: $isPresenting) { EmptyView() }
+            if(role == "User"){
+                // Key exists in UserDefaults
+                NavigationLink(destination: BottomNavigation().navigationBarBackButtonHidden(true), isActive: $isPresenting) { EmptyView() }
+            }else if(role == "Admin"){
+                NavigationLink(destination:HomeScreen().navigationBarBackButtonHidden(true), isActive: $isPresenting) { EmptyView() }
+              
+            }
             Spacer()
             HStack{
        
-                Text("New to Discovery ?").foregroundColor(Color.gray)
+                Text(LocalizedStringKey("newToDiscovery")).foregroundColor(Color.gray)
                     NavigationLink(destination: SignUpScreen().navigationBarBackButtonHidden(true)) {
-                        Text("Join Now").foregroundColor(Color.red)
+                        Text(LocalizedStringKey("joinNow")).foregroundColor(Color.red)
                     
                     }}
         }.padding(20).overlay(
@@ -127,10 +161,41 @@ struct LoginScreen: View {
             , alignment: .bottom
         )
         
-        }}   }
+        }}
+    
+    
+    
+    private func authenticateWithBiometrics() {
+        let context = LAContext()
+        var error: NSError?
 
-struct LoginScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginScreen()
+        // Check if Face ID is available on the device and the user has granted permission
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Log in with Face ID"
+            // Prompt the user to authenticate with Face ID
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, error in
+                if success {
+                    // User authenticated successfully
+                    DispatchQueue.main.async {
+                        isUnlocked = true
+                    }
+                    print("User authenticated successfully")
+                    
+                } else {
+                    // Authentication failed
+                    print(error?.localizedDescription ?? "Authentication failed")
+                }
+            }
+        } else {
+            // Face ID is not available or the user has not granted permission
+            print(error?.localizedDescription ?? "Face ID not available")
+        }
     }
+    
 }
+
+
+
+
+
+

@@ -51,7 +51,7 @@ class LoginViewModel: ObservableObject {
         }
     }
     func login(request: LoginRequest, completion: @escaping (Result<LoginResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.39:9090/api/user/signin"
+        let url = baseUrl+"api/user/signin"
         
         do {
             let encodedRequest = try JSONEncoder().encode(request)

@@ -26,10 +26,10 @@ struct ChangePasswordScreen: View {
                         .resizable()
                         .frame(height: 300)
                         .edgesIgnoringSafeArea(.horizontal)
-            Text("Change password").font(.system(size:30)).frame(maxWidth:.infinity, alignment:.leading)
+            Text(LocalizedStringKey("changePassword")).font(.system(size:30)).frame(maxWidth:.infinity, alignment:.leading)
                 .padding(.bottom,5)
             Section{
-            PasswordView(leftIcon : "lock", placeHolder:"Password", password: $changePasswordModel.oldPassword)
+            PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("password"), password: $changePasswordModel.oldPassword)
                 .onChange(of: changePasswordModel.oldPassword) { value in
                     changePasswordModel.validateOldPassword()
                 }
@@ -39,7 +39,7 @@ struct ChangePasswordScreen: View {
             }   }
             
             Section{
-            PasswordView(leftIcon : "lock", placeHolder:"New password", password: $changePasswordModel.newPassword)
+            PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("newPassword"), password: $changePasswordModel.newPassword)
                 .onChange(of: changePasswordModel.newPassword) { value in
                     changePasswordModel.validateNewPassword()
                 }
@@ -49,7 +49,7 @@ struct ChangePasswordScreen: View {
             }   }
             
             Section{
-                PasswordView(leftIcon : "lock", placeHolder:  "Confirm password",  password: $changePasswordModel.confirmPassword) .onChange(of: changePasswordModel.confirmPassword) { value in
+                PasswordView(leftIcon : "lock", placeHolder:  LocalizedStringKey("confirmPassword"),  password: $changePasswordModel.confirmPassword) .onChange(of: changePasswordModel.confirmPassword) { value in
                     changePasswordModel.validateConfirmPassword()
                 }
                 if let errorMessage = changePasswordModel.confirmPasswordError {
@@ -89,7 +89,7 @@ struct ChangePasswordScreen: View {
                 
                 
             ) {
-                        Text("Save")
+                        Text(LocalizedStringKey("save"))
                             .padding()
                             .foregroundColor(Color.white)
                            
@@ -108,10 +108,9 @@ struct ChangePasswordScreen: View {
      
         }.padding(20).overlay(
             // Add SnackBarView to the view hierarchy
-            Snackbar(message:"Password changed ", duration: 0.3, isShowing:  $isSnackbarShowing)
+            Snackbar(message: NSLocalizedString("passwordChanged", comment: ""), duration: 0.3, isShowing: $isSnackbarShowing)
                 .animation(.easeInOut(duration: 0.3))
                 .transition(.move(edge: .bottom))
-                //.padding(.bottom, 30)
             , alignment: .bottom
         )
         

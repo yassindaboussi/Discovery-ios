@@ -1,0 +1,44 @@
+/*
+  Localizable.strings
+  Discovery
+
+  Created by Discovery on 10/5/2023.
+  
+*/
+"email" = "Email";
+"password" = "Password";
+"forgetPassword" = "Forget password ?";
+"login" = "Login";
+"newToDiscovery" = "New to Discovery ?";
+"joinNow" = "Join Now";
+"username" = "Username";
+"confirmPassword" = "Confirm password";
+"signUp" = "Sign Up";
+"alreadyHaveAnAccount ?" = "Already have an account ?";
+"dontWoory" = "Don't worry ! It happens.Please enter the adress associted with your account";
+"send" = "Send";
+"backTo" = "Back to ?";
+"resetPassword" = "Reset password";
+"verificationCode" = "Verification code";
+"codeSendedToMail" = "We have send code to your e-mail,please type the code";
+"codeNotReceived"="Didn't receive the code?";
+"resend"="Resend";
+"verify"="Verify";
+"changePassword"="Change password";
+"newPassword"="New password";
+"save"="Save";
+"passwordChanged"="Password changed ";
+"typeSomethingCoolHere"="Type something cool here !";
+"photo"="Photo";
+"back"="Back";
+"post"="Post";
+"whatAreYouLookingFor"="What are you looking for?";
+"search"="Search";
+"recommended"="Recommended";
+"showAll"="Show all";
+"noRatings"= "No ratings";
+"myFavorites"="My Favorites";
+"whatNew"="What's new?";
+"categories"="Categories";
+"thisCategoryDoesNotContainAnySuggestion"="This category does not contain any suggestion at the moment";
+"writeComment"="Write a comment";

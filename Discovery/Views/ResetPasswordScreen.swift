@@ -25,10 +25,10 @@ struct ResetPasswordScreen: View {
                         .resizable()
                         .frame(height: 300)
                         .edgesIgnoringSafeArea(.horizontal)
-            Text("Reset password").font(.system(size:30)).frame(maxWidth:.infinity, alignment:.leading)
+            Text(LocalizedStringKey("resetPassword")).font(.system(size:30)).frame(maxWidth:.infinity, alignment:.leading)
                 .padding(.bottom,5)
             Section{
-            PasswordView(leftIcon : "lock", placeHolder:"Password", password: $forgetPasswordModel.password)
+            PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("password"), password: $forgetPasswordModel.password)
                 .onChange(of: forgetPasswordModel.password) { value in
                     forgetPasswordModel.validatePassword()
                 }
@@ -37,7 +37,7 @@ struct ResetPasswordScreen: View {
                     .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
             }   }
             Section{
-                PasswordView(leftIcon : "lock", placeHolder:  "Confirm password",  password: $forgetPasswordModel.confirmPassword) .onChange(of: forgetPasswordModel.confirmPassword) { value in
+                PasswordView(leftIcon : "lock", placeHolder:  LocalizedStringKey("confirmPassword"),  password: $forgetPasswordModel.confirmPassword) .onChange(of: forgetPasswordModel.confirmPassword) { value in
                     forgetPasswordModel.validateConfirmPassword()
                 }
                 if let errorMessage = forgetPasswordModel.confirmPasswordError {
@@ -63,7 +63,7 @@ struct ResetPasswordScreen: View {
                         // Action si la connexion échoue
                         print(error)
                     }}}) {
-                        Text("Save")
+                        Text(  LocalizedStringKey("save"))
                             .padding()
                             .foregroundColor(Color.white)
                            
@@ -79,9 +79,9 @@ struct ResetPasswordScreen: View {
             Spacer()
             HStack{
        
-                Text("Back to ?").foregroundColor(Color.gray)
-                    NavigationLink(destination: SignUpScreen()) {
-                        Text("Login").foregroundColor(Color.red)
+                Text(LocalizedStringKey("backTo")).foregroundColor(Color.gray)
+                    NavigationLink(destination: LoginScreen()) {
+                        Text(LocalizedStringKey("Login")).foregroundColor(Color.red)
                             .navigationBarBackButtonHidden(true)
                     
                     }}

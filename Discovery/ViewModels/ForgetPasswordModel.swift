@@ -60,7 +60,7 @@ class ForgetPasswordModel: ObservableObject {
         }
     }
     func sendEmail(request: SendMailRequest, completion: @escaping (Result<String, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.39:9090/api/user/SendCodeForgot"
+        let url = baseUrl+"api/user/SendCodeForgot"
         
         do {
             let encodedRequest = try JSONEncoder().encode(request)
@@ -107,7 +107,7 @@ class ForgetPasswordModel: ObservableObject {
     
     
     func VerifyCodeOtp(request: VerifyCodeRequest, completion: @escaping (Result<MessageResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.39:9090/api/user/VerifCodeForgot"
+        let url = baseUrl+"api/user/VerifCodeForgot"
         
         do {
             let encodedRequest = try JSONEncoder().encode(request)
@@ -145,7 +145,7 @@ class ForgetPasswordModel: ObservableObject {
     }
     
     func ResetPassword(request: ResetPasswordRequest, completion: @escaping (Result<MessageResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.39:9090/api/user/ChangePasswordForgot"
+        let url = baseUrl+"api/user/ChangePasswordForgot"
         
         do {
             let encodedRequest = try JSONEncoder().encode(request)

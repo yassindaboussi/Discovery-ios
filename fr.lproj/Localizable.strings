@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  Discovery
+
+  Created by Discovery on 10/5/2023.
+  
+*/
+"email" = "Email";
+"password" = "Mot de passe";
+"forgetPassword" = "Mot de passe oublié ?";
+"login" = "Connexion";
+"newToDiscovery" = "Nouveau sur Discovery ?";
+"joinNow" = "Rejoignez-nous";
+"username" = "Nom d'utilisateur";
+"confirmPassword" = "Confirmez le mot de passe";
+"signUp" = "S'inscrire";
+"alreadyHaveAnAccount" = "Déjà membre ?";
+"dontWoory" = "Ne vous inquiétez pas ! Cela arrive. Veuillez entrer l'adresse associée à votre compte";
+"send" = "Envoyer";
+"backTo" = "Retour à ?";
+"resetPassword" = "Réinitialiser le mot de passe";
+"verificationCode" = "Code de vérification";
+"codeSendedToMail" = "Nous avons envoyé le code à votre adresse e-mail. Veuillez saisir le code";
+"codeNotReceived"="Vous n'avez pas reçu le code ?";
+"resend"="Renvoyer";
+"verify"="Vérifier";
+"changePassword"="Changer le mot de passe";
+"newPassword"="Nouveau mot de passe";
+"save"="Enregistrer";
+"passwordChanged"="Mot de passe modifié";
+"typeSomethingCoolHere"="Saisissez quelque chose de cool ici !";
+"photo"="Photo";
+"back"="Retour";
+"post"="Publier";
+"whatAreYouLookingFor"="Que recherchez-vous ?";
+"search"="Recherche";
+"recommended"="Recommandé";
+"showAll"="Afficher tout";
+"noRatings"= "Pas de notation";
+"myFavorites"="Mes favoris";
+"whatNew"="Quoi de neuf ?";
+"categories"="Catégories";
+"thisCategoryDoesNotContainAnySuggestion"="Cette catégorie ne contient actuellement aucune suggestion";
+"writeComment"="Écrire un commentaire";
+"noFavorite"="Cette catégorie ne contient actuellement aucune suggestion";

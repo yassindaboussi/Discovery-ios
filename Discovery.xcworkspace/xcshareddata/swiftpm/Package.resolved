@@ -10,12 +10,30 @@
       }
     },
     {
+      "identity" : "facebook-ios-sdk?fbclid=iwar2kmzgsmuz7_ef_efoibk_dhn1nmib-1bqr7z4i9iud4tqwt3euoq7mueq",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/facebook-ios-sdk?fbclid=IwAR2KmZgsmuZ7_Ef_eFOibk_dHn1Nmib-1bQR7z4i9iud4tqWT3eUoQ7muEQ",
+      "state" : {
+        "revision" : "c3d367656ae8ced1149c2c6a5e6b5dd91ecad63c",
+        "version" : "9.3.0"
+      }
+    },
+    {
       "identity" : "swiftuisnackbar",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zaniluca/SwiftUISnackbar",
       "state" : {
         "branch" : "main",
         "revision" : "ff5132c91e3a3855af679e648b95c8ab60c5eeb1"
+      }
+    },
+    {
+      "identity" : "waterfallgrid?fbclid=iwar1i4eyzmgpb-ddwvzfceuoce3ydocjbd5l6t6xwux0fuq9svjp9855kxfq",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/paololeonardi/WaterfallGrid?fbclid=IwAR1i4eyZMgPB-dDwVzFCeuOCE3ydOcjBD5L6T6xWux0fUq9SVJp9855KxfQ",
+      "state" : {
+        "revision" : "944aa82832ed5a9eaaf50862cdd53e3c10ab55eb",
+        "version" : "1.0.1"
       }
     }
   ],

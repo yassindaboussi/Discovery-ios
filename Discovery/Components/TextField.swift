@@ -1,17 +1,16 @@
 //
-//  CustomTextField.swift
+//  TextField.swift
 //  Discovery
 //
-//  Created by Discovery on 21/3/2023.
+//  Created by Discovery on 13/4/2023.
 //
-
 import Foundation
 import SwiftUI
 
 
 
-struct TextFieldView : View {
-    var leftIcon : String
+struct TextFieldView: View {
+    var leftIcon : String? = nil
     var rightIcon : String? = nil
     var placeHolder : String
     
@@ -30,21 +29,22 @@ struct TextFieldView : View {
     var body: some View {
         ZStack(alignment : .leading) {
             HStack {
-            
-                    Image(systemName: leftIcon)
+                if(leftIcon != nil){
+                    Image(systemName: leftIcon ?? "")
                         .foregroundColor(Color.secondary)
+                }
             
                 TextField(placeHolder, text: $text)
             
                 .focused($focusField, equals: .fieldName)
                 
                 if(rightIcon != nil){
-                    Image(systemName: rightIcon ?? "person")
+                    Image(systemName: rightIcon ?? "")
                         .foregroundColor(Color.secondary)
                 }
             }
             .padding()
-            .overlay(RoundedCorners(tl: 20, tr: 5, bl: 5, br: 20).stroke(lineWidth: 1).foregroundColor(.gray))
+            .overlay(RoundedCorners(tl: 10, tr: 10, bl: 10, br: 10).stroke(lineWidth: 1).foregroundColor(.gray))
             
 
         }

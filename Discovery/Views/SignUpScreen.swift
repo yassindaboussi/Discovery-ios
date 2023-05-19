@@ -10,7 +10,7 @@ import SwiftUI
 struct SignUpScreen: View {
     
     
-   // @StateObject var signViewModel = SignupViewModel()
+
     @StateObject var signViewModel = SignupViewModel()
     var body: some View {
 
@@ -20,7 +20,7 @@ struct SignUpScreen: View {
                     .frame(height: 200)
                     .edgesIgnoringSafeArea(.horizontal)
                 Section{
-                    TextFieldView(leftIcon : "person",placeHolder : "Username", text: $signViewModel.username)
+                    CustumTextField(leftIcon : "person",placeHolder :LocalizedStringKey("username"), text: $signViewModel.username)
                         .onChange(of: signViewModel.username) { value in
                             signViewModel.validateUsername()
                         }
@@ -30,7 +30,7 @@ struct SignUpScreen: View {
                     }
                 }
                 Section{
-                    TextFieldView(leftIcon : "envelope",placeHolder : "Email", text: $signViewModel.email)
+                    CustumTextField(leftIcon : "envelope",placeHolder :LocalizedStringKey("email"), text: $signViewModel.email)
                         .onChange(of: signViewModel.email) { value in
                             signViewModel.validateEmail()
                         }
@@ -43,7 +43,7 @@ struct SignUpScreen: View {
                 
               
                 Section{
-                PasswordView(leftIcon : "lock", placeHolder:"Password", password: $signViewModel.password)
+                PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("password"), password: $signViewModel.password)
                     .onChange(of: signViewModel.password) { value in
                         signViewModel.validatePassword()
                     }
@@ -52,7 +52,7 @@ struct SignUpScreen: View {
                         .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                 }   }
                 Section{
-                    PasswordView(leftIcon : "lock", placeHolder:  "Confirm password",  password: $signViewModel.confirmPassword) .onChange(of: signViewModel.confirmPassword) { value in
+                    PasswordView(leftIcon : "lock", placeHolder: LocalizedStringKey("confirmPassword"),password: $signViewModel.confirmPassword) .onChange(of: signViewModel.confirmPassword) { value in
                         signViewModel.validateConfirmPassword()
                     }
                     if let errorMessage = signViewModel.confirmPasswordError {
@@ -60,6 +60,7 @@ struct SignUpScreen: View {
                             .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                     }}
                 Button(action: {
+                    print("clicked")
                     let request = SignupRequest(username:signViewModel.username,email:signViewModel.email, password:signViewModel.password)
                     signViewModel.signup(request: request) { result in
                         switch result {
@@ -72,9 +73,10 @@ struct SignUpScreen: View {
                             // Action si la connexion échoue
                             print(error)
                         }
+                        print(request)
                     }
                 }) {
-                    Text("Sign Up")
+                    Text(LocalizedStringKey("signUp"))
                         .padding()
                         .foregroundColor(Color.white)
                     
@@ -88,9 +90,9 @@ struct SignUpScreen: View {
                 Spacer()
                 HStack{
                     
-                    Text("Already have an account ?").foregroundColor(Color.gray)
+                    Text(LocalizedStringKey("alreadyHaveAnAccount")).foregroundColor(Color.gray)
                     NavigationLink(destination: LoginScreen().navigationBarBackButtonHidden(true)) {
-                        Text("Login ").foregroundColor(Color.red)
+                        Text(LocalizedStringKey("login")).foregroundColor(Color.red)
                         
                     }}
                 

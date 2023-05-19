@@ -58,7 +58,7 @@ class ChangePasswordModel: ObservableObject {
     
     
     func ChangePassword(request: ChangePasswordRequest, completion: @escaping (Result<MessageResponse, Error>) -> ()) -> DataRequest {
-        let url = "http://172.17.2.39:9090/api/user/EditProfil"
+        let url = baseUrl+"api/user/EditProfil"
         
         do {
             let encodedRequest = try JSONEncoder().encode(request)

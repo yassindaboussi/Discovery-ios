@@ -35,6 +35,8 @@ Please ⭐️ this repo and share it with others
 [![MongoDB](https://img.shields.io/badge/MongoDB-brightgreen.svg)](https://mongodb.com)
 [![ExpressJS](https://img.shields.io/badge/ExpressJs-orange.svg)](https://expressjs.com)
 [![NodeJS](https://img.shields.io/badge/ExpressJs-brightgreen.svg)](https://nodejs.org)
+[![Swift]( https://img.shields.io/badge/-Swift-orange)](https://swift.org)
+     
     
 <p align="center">
    <a href="https://github.com/yassindaboussi/Discovery-ios">
